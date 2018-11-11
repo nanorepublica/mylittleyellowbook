@@ -1,33 +1,16 @@
-:root {
-    --yellowColor: rgb(238,209,49);
-    --base: 16;
-    --baseWidth: calc(var(--base) * 10px);
-}
-@media (min-width: 1000px) {
-    :root {
-        --base: 7;
-    }
-    #circle {
-        font-family: "Bebas Neue";
-        margin-top: 50px;
-        margin-left: 100px;
-        min-width: calc(var(--baseWidth) * 10);
-        min-height: calc(var(--baseWidth) * 10);
-        width: calc(var(--baseWidth) * 10);
-        border-radius: calc(var(--baseWidth) * 5);
-        background-color: var(--yellowColor);
-        color: #fff;
-        grid-area: title;
-    }
-}
-body {
-    overflow-x: hidden;
-}
 @font-face {
     font-family: "Bebas Neue";
     src:local("Bebas Neue"),
         url("./fonts/bebas_neue.tff");
     font-weight: normal;
+}
+:root {
+    --yellowColor: rgb(238,209,49);
+    --base: 16;
+    --baseWidth: calc(var(--base) * 10px);
+}
+body {
+    overflow-x: hidden;
 }
 h1 {
     margin: 0;
@@ -36,6 +19,23 @@ h1 {
     letter-spacing: 16px;
     font-weight: normal;
     line-height: 1.2;
+}
+h2 {
+    font-weight: normal;
+    color: var(--yellowColor);
+}
+p {
+    background-color: var(--yellowColor);
+    color: #fff;
+    padding: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a {
+    color: var(--yellowColor);
+    font-weight: normal;
 }
 #circle {
     font-family: "Bebas Neue";
@@ -53,23 +53,42 @@ h1 {
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
-        "title menu";
+        "title"
+        "menu";
     margin: 5px;
     margin-bottom: 0;
 }
 #menu {
     font-family: "Bebas Neue";
     color: var(--yellowColor);
-    text-align: right;
+    text-align: center;
     font-size: calc(var(--base) * 1rem);
     margin-right: 20px;
     grid-area: menu;
 }
-@media (min-width: 700px) {
+#about {
+    margin-top: 1500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 1000px;
+    font-size: 5rem;
+}
+@@media (max-width: 700px) {
+    ul {
+        margin: 10px;
+    }
+}
+@media (min-width: 1000px) {
+    :root {
+        --base: 7;
+    }
+    #circle {
+        margin-top: 50px;
+        margin-left: 100px;
+    }
     .container {
         grid-template-areas:
-            "title"
-            "menu";
+            "title menu";
     }
     #menu {
         font-family: "Bebas Neue";
@@ -77,7 +96,7 @@ h1 {
         font-size: calc(var(--base) * 1rem);
         margin-right: 20px;
         grid-area: menu;
-        text-align: center;
+        text-align: right;
     }
     #about {
         margin-top: 350px;
@@ -88,32 +107,4 @@ h1 {
         font-family: "Bebas Neue";
         font-size: 2rem;
     }
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px;
-}
-a {
-    color: var(--yellowColor);
-    font-weight: normal;
-}
-#about {
-    margin-top: 1500px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 1000px;
-    font-weight: normal;
-    font-family: "Bebas Neue";
-    font-size: 5rem;
-    min-width: 100vw;
-}
-h2 {
-    font-weight: normal;
-    color: var(--yellowColor);
-}
-p {
-    background-color: var(--yellowColor);
-    color: #fff;
-    padding: 10px;
 }
