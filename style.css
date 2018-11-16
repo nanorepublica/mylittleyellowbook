@@ -69,12 +69,14 @@ a {
 }
 .detail {
     font-family: "Bebas Neue";
-    margin-top: 1500px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 1000px;
     font-size: 5rem;
     font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
 #about ul {
@@ -109,10 +111,8 @@ a {
         text-align: right;
     }
     .detail {
-        margin-top: 400px;
         margin-left: 100px;
         margin-right: 300px;
-        margin-bottom: 300px;
         font-size: 2rem;
     }
     #about ul {
