@@ -76,7 +76,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    width: 100vw;
 }
 
 #about ul {
@@ -114,6 +114,8 @@ a {
         margin-left: 100px;
         margin-right: 300px;
         font-size: 2rem;
+        height: 100vh;
+        width: unset;
     }
     #about ul {
         margin-top: -50px;
